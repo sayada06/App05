@@ -1,0 +1,22 @@
+<ion-content>
+  <ion-grid>
+    <ion-col size="12" size-md="6" size-lg="4" *ngFor="let i of items">
+      <ion-card>
+        <img [src]="i.ImageURL" alt="">
+        <ion-card-header>
+          <ion-card-title>
+            {{ i.name }}
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            {{ i.detail }}
+          </ion-list>
+          <ion-list>
+            {{ i.price }} บาท
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-grid>
+</ion-content>
