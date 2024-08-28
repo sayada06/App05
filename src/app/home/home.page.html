@@ -1,7 +1,13 @@
-<ion-content>
+<ion-header [translucent]="true">
+  <ion-toolbar color="blue">
+    <ion-title>Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="pink">
   <ion-grid>
     <ion-col size="12" size-md="6" size-lg="4" *ngFor="let i of items">
-      <ion-card>
+      <ion-card (click)="gotodetail(i)">
         <img [src]="i.ImageURL" alt="">
         <ion-card-header>
           <ion-card-title>
@@ -13,7 +19,7 @@
             {{ i.detail }}
           </ion-list>
           <ion-list>
-            {{ i.price }} บาท
+            {{ i.price }} ฿
           </ion-list>
         </ion-card-content>
       </ion-card>

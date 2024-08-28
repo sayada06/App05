@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="blue">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="pink">
+  <ion-card *ngIf="item">
+    <img [src]="item.ImageURL" alt="">
+    <ion-card-header>
+      <ion-card-title>
+        {{ item.name }}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        {{ item.detail }}
+      </ion-list>
+      <ion-list>
+        {{ item.price }} ฿
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
